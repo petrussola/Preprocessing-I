@@ -133,6 +133,7 @@ table {
 html,
 body {
   height: 100%;
+  color: gray;
 }
 .container {
   width: 75vw;
@@ -144,5 +145,21 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 1rem 0;
+}
+.container header h1 {
+  font-size: 3rem;
+}
+.container header nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+.container header nav p {
+  font-size: 1.5rem;
+  margin: 0 2rem;
+}
+.container header nav p:hover {
+  border-bottom: 1px dotted gray;
 }
