@@ -130,6 +130,9 @@ table {
 * {
   box-sizing: border-box;
 }
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
 html,
 body {
   height: 100%;
