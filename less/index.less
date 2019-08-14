@@ -101,7 +101,12 @@ h3 {
 		align-items: center;
 		width: 100%;
 		padding: 1rem 0;
+		border-bottom: 1px solid @primaryColor;
+		background-color: beige;
 		
+		h2 {
+			padding: 0 1rem;
+		}
 
 		nav {
 			.my-flex-defaults-row-wrap;
@@ -155,8 +160,9 @@ h3 {
 			padding: @desktopPadding;
 			margin: 0.5rem;
 			.my-flex-defaults-column-wrap;
-			justify-content: center;
-			border: 1px dotted @primaryColor;
+			justify-content: flex-start;
+			border: 1px solid @primaryColor;
+			background-color: beige;
 
 			* {
 				padding: 0.5rem 0;

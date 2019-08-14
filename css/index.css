@@ -157,6 +157,11 @@ h3 {
   align-items: center;
   width: 100%;
   padding: 1rem 0;
+  border-bottom: 1px solid gray;
+  background-color: beige;
+}
+.container header h2 {
+  padding: 0 1rem;
 }
 .container header nav {
   display: flex;
@@ -206,8 +211,9 @@ h3 {
   margin: 0.5rem;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  border: 1px dotted gray;
+  justify-content: flex-start;
+  border: 1px solid gray;
+  background-color: beige;
 }
 .container .main-content div * {
   padding: 0.5rem 0;
