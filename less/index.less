@@ -1,3 +1,15 @@
+// mixins
+
+.my-flex-defaults-row-wrap() {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.my-flex-defaults-column-wrap() {
+	display: flex;
+	flex-flow: column wrap;
+}
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -60,11 +72,12 @@ html, body {
 .container {
 	width: 75vw;
 	margin: 0 auto;
-	display: flex;
-	flex-flow: column wrap;
+	.my-flex-defaults-column-wrap;
 	
 	header {
-		
+		.my-flex-defaults-row-wrap;
+		justify-content: space-between;
+		width: 100%;
 	}
 }
 
