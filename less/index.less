@@ -1,6 +1,9 @@
 // colors
 @primaryColor: gray;
 
+// padding
+@desktopPadding: 1rem;
+
 
 // mixins
 
@@ -82,6 +85,10 @@ h2 {
 	font-size: 2.5rem;
 }
 
+h3 {
+	font-size: 1.5rem;
+}
+
 .container {
 	width: 75vw;
 	margin: 0 auto;
@@ -113,7 +120,7 @@ h2 {
 	.jumbotron {
 		.my-flex-defaults-row-wrap;
 		justify-content: space-evenly;
-		padding: 1rem;
+		padding: @desktopPadding;
 
 		div {
 			width: 45%;
@@ -126,7 +133,7 @@ h2 {
 			justify-content: center;
 
 			p {
-				padding: 1rem;
+				padding: @desktopPadding;
 				border: 1px solid @primaryColor;
 				margin-top: 1rem;
 			}
@@ -139,6 +146,35 @@ h2 {
 		}
 	}
 
+	.main-content {
+		.my-flex-defaults-row-wrap;
+		justify-content: space-evenly;
+
+		div {
+			width: 45%;
+			padding: @desktopPadding;
+			.my-flex-defaults-column-wrap;
+
+			// * {
+			// 	padding: 0.5rem 0;
+			// 	width: 100%;
+			// }
+
+			.listItems {
+
+				p {
+					border-top: 1px solid @primaryColor; 
+				}	
+				p:last-of-type {
+					border-bottom: 1px solid @primaryColor; 
+				}
+				p.background {
+					background-color: #lightgray;
+				}
+
+			}
+		}
+	}
 }
 
 .invisible {
@@ -146,6 +182,6 @@ h2 {
 }
 
 .red {
-	border: 1px solid red;
+	border: 1px solid green;
 }
 

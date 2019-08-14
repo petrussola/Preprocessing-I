@@ -192,6 +192,27 @@ h2 {
   height: auto;
   border-radius: 50%;
 }
+.container .main-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.container .main-content div {
+  width: 45%;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+.container .main-content div * {
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.container .main-content div .listItems p {
+  border-top: 1px solid gray;
+}
+.container .main-content div .listItems p:last-of-type {
+  border-bottom: 1px solid gray;
+}
 .invisible {
   display: none;
 }
