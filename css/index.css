@@ -163,3 +163,13 @@ body {
 .container header nav p:hover {
   border-bottom: 1px dotted gray;
 }
+.container .jumbotron {
+  display: flex;
+  flex-flow: row wrap;
+}
+.invisible {
+  display: none;
+}
+.red {
+  border: 1px solid red;
+}
