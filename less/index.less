@@ -153,12 +153,15 @@ h3 {
 		div {
 			width: 45%;
 			padding: @desktopPadding;
+			margin: 0.5rem;
 			.my-flex-defaults-column-wrap;
+			justify-content: center;
+			border: 1px dotted @primaryColor;
 
-			// * {
-			// 	padding: 0.5rem 0;
-			// 	width: 100%;
-			// }
+			* {
+				padding: 0.5rem 0;
+				width: 100%;
+			}
 
 			.listItems {
 
@@ -169,11 +172,18 @@ h3 {
 					border-bottom: 1px solid @primaryColor; 
 				}
 				p.background {
-					background-color: #lightgray;
+					background-color: lightgrey;
 				}
 
 			}
 		}
+	}
+
+	footer {
+		.my-flex-defaults-row-wrap;
+		justify-content: center;
+		align-items: center;
+		height: 3rem;
 	}
 }
 
@@ -182,6 +192,6 @@ h3 {
 }
 
 .red {
-	border: 1px solid green;
+	border: 1px solid black;
 }
 
