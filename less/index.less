@@ -74,10 +74,19 @@ html, body {
 	color: @primaryColor;
 }
 
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
 .container {
 	width: 75vw;
 	margin: 0 auto;
 	.my-flex-defaults-column-wrap;
+	
 	
 	header {
 		.my-flex-defaults-row-wrap;
@@ -85,10 +94,8 @@ html, body {
 		align-items: center;
 		width: 100%;
 		padding: 1rem 0;
+		
 
-		h1 {
-			font-size: 3rem;
-		}
 		nav {
 			.my-flex-defaults-row-wrap;
 
@@ -116,6 +123,9 @@ html, body {
 		.summary {
 			.my-flex-defaults-column-wrap;
 			align-items: center;
+			justify-content: space-evenly;
+
+
 		}
 
 		.headPhoto img {
