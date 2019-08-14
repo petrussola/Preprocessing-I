@@ -166,6 +166,22 @@ body {
 .container .jumbotron {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.container .jumbotron div {
+  width: 45%;
+  height: 50vh;
+}
+.container .jumbotron .summary {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.container .jumbotron .headPhoto img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 .invisible {
   display: none;
