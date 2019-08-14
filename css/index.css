@@ -180,7 +180,12 @@ h2 {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.container .jumbotron .summary p {
+  padding: 1rem;
+  border: 1px solid gray;
+  margin-top: 1rem;
 }
 .container .jumbotron .headPhoto img {
   width: 100%;
