@@ -1,3 +1,25 @@
+// colors
+@primaryColor: gray;
+
+// padding
+@desktopPadding: 1rem;
+@mobilePadding: 0.5rem;
+
+// media size
+@mobileScreen: 500px;
+
+// mixins
+
+.my-flex-defaults-row-wrap() {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.my-flex-defaults-column-wrap() {
+	display: flex;
+	flex-flow: column wrap;
+}
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -50,10 +72,180 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: 'Open Sans', sans-serif;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	color: @primaryColor;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+.container {
+	width: 75vw;
+	margin: 0 auto;
+	.my-flex-defaults-column-wrap;
+	@media (max-width: @mobileScreen) {
+		width: 100vw;
+	}
+	
+	
+	header {
+		.my-flex-defaults-row-wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 1rem 0;
+		border-bottom: 1px solid @primaryColor;
+		background-color: beige;
+		@media (max-width: @mobileScreen) {
+			.my-flex-defaults-column-wrap;
+		}
+		
+		h2 {
+			padding: 0 1rem;
+			@media (max-width: @mobileScreen) {
+				padding-bottom: 0.5rem;
+			}
+
+		}
+
+		nav {
+			.my-flex-defaults-row-wrap;
+			@media (max-width: @mobileScreen) {
+				.my-flex-defaults-column-wrap;
+				align-content: center;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+			}
+
+			p {
+				font-size: 1.5rem;
+				margin: 0 2rem;
+				@media (max-width: @mobileScreen) {
+					padding: @mobilePadding;
+					border-top: 1px solid @primaryColor;
+					width: 100%;
+					text-align: center;
+				}
+
+				&:hover {
+					border-bottom: 1px dotted gray;
+					@media (max-width: @mobileScreen) {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+
+	.jumbotron {
+		.my-flex-defaults-row-wrap;
+		justify-content: space-evenly;
+		padding: @desktopPadding;
+		@media (max-width: @mobileScreen) {
+			.my-flex-defaults-column-wrap;
+			padding: 0 1rem;
+		}
+
+		div {
+			width: 45%;
+			height: 50vh;
+			@media(max-width: @mobileScreen) {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+
+		.summary {
+			.my-flex-defaults-column-wrap;
+			align-items: center;
+			justify-content: center;
+
+			p {
+				padding: @desktopPadding;
+				border: 1px solid @primaryColor;
+				margin-top: 1rem;
+			}
+		}
+
+		.headPhoto img {
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+		}
+	}
+
+	.main-content {
+		.my-flex-defaults-row-wrap;
+		justify-content: space-evenly;
+		@media (max-width: @mobileScreen) {
+			.my-flex-defaults-column-wrap;
+		}
+
+		div {
+			width: 45%;
+			padding: @desktopPadding;
+			margin: 0.5rem;
+			.my-flex-defaults-column-wrap;
+			justify-content: flex-start;
+			border: 1px solid @primaryColor;
+			background-color: beige;
+			@media (max-width: @mobileScreen) {
+				width: 90%;
+				margin: 0.5rem auto;
+			}
+
+			* {
+				padding: 0.5rem 0;
+				width: 100%;
+			}
+
+			.listItems {
+
+				p {
+					border-top: 1px solid @primaryColor; 
+				}	
+				p:last-of-type {
+					border-bottom: 1px solid @primaryColor; 
+				}
+				p.background {
+					background-color: lightgrey;
+				}
+
+			}
+		}
+	}
+
+	footer {
+		.my-flex-defaults-row-wrap;
+		justify-content: center;
+		align-items: center;
+		height: 3rem;
+	}
+}
+
+.invisible {
+	display: none;
+}
+
+.red {
+	border: 1px solid black;
 }
 
